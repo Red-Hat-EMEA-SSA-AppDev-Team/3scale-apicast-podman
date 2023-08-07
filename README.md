@@ -15,7 +15,7 @@ Red Hat 3scale APIcast Gateway **version 2.13.4** is used in these instructions.
 
 ## Instructions 
 
-### Staging APIcast Gateway
+### 1. Staging APIcast Gateway
 
 Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/introduction-to-systemd_configuring-basic-system-settings) service to manage the staging APIcast lifecycle:
 
@@ -98,7 +98,7 @@ Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enter
 
 3. The rest of the instrucitons are the same as in the previous section.
 
-### Production APIcast Gateway
+### 2. Production APIcast Gateway
 
 Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/introduction-to-systemd_configuring-basic-system-settings) service to manage the staging APIcast lifecycle:
 
