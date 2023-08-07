@@ -2,7 +2,10 @@
 
 ## Purpose of this repository
 
-This repo contains instructions for running [Red Hat 3scale APIcast Gateways](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#doc-wrapper) outside of a Red Hat OpenShift cluster. The target hosts can be any [RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/)-based host such as a virtual machine or an AWS EC2 instance.
+This repo contains instructions for running [Red Hat 3scale APIcast Gateways](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#doc-wrapper) outside of a [Red Hat OpenShift](https://access.redhat.com/products/openshift/) cluster. 
+
+- The target hosts can be any [RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/)-based host such as a virtual machine or an AWS EC2 instance.
+- The [Red Hat 3scale APIcast Gateways](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#doc-wrapper) can be fronted by a load-balancer/reverse-proxy for external/internal access by API consumers applications.
 
 Red Hat 3scale APIcast Gateway **version 2.13.4** is used in these instructions.
 
