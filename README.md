@@ -24,7 +24,7 @@ Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enter
 
 1. As a root user, create the `apicast-staging.service` file in the `/etc/systemd/system` directory with the following contents:
 
-    > :warning: **NOTE**: Replace the `<3scale_tenant_access_token>` and `<3scale_tenant_admin_endpoint>` with the appropriate values according to your environment.
+    >  **NOTE**: Replace the `<3scale_tenant_access_token>` and `<3scale_tenant_admin_endpoint>` with the appropriate values according to your environment.
 
     ```shell script
     [Unit]
@@ -68,7 +68,7 @@ Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enter
 
 2. Use the following content for the `apicast-staging.service` file in the `/etc/systemd/system` directory:
 
-    > :warning: **NOTE**: Replace the `/home/ec2-user/certs`, `<3scale_tenant_access_token>` and `<3scale_tenant_admin_endpoint>` with the appropriate values according to your environment.
+    >  **NOTE**: Replace the `/home/ec2-user/certs`, `<3scale_tenant_access_token>` and `<3scale_tenant_admin_endpoint>` with the appropriate values according to your environment.
 
     ```shell script
     [Unit]
@@ -107,7 +107,7 @@ Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enter
 
 1. As a root user, create the `apicast-production.service` file in the `/etc/systemd/system` directory with the following contents:
 
-    > :warning: **NOTE**: Replace the `<3scale_tenant_access_token>` and `<3scale_tenant_admin_endpoint>` with the appropriate values according to your environment.
+    >  **NOTE**: Replace the `<3scale_tenant_access_token>` and `<3scale_tenant_admin_endpoint>` with the appropriate values according to your environment.
 
     ```shell script
     [Unit]
@@ -151,7 +151,7 @@ Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enter
 
 2. Use the following content for the `apicast-production.service` file in the `/etc/systemd/system` directory:
 
-    > :warning: **NOTE**: Replace the `/home/ec2-user/certs`, `<3scale_tenant_access_token>` and `<3scale_tenant_admin_endpoint>` with the appropriate values according to your environment.
+    >  **NOTE**: Replace the `/home/ec2-user/certs`, `<3scale_tenant_access_token>` and `<3scale_tenant_admin_endpoint>` with the appropriate values according to your environment.
 
     ```shell script
     [Unit]
@@ -200,7 +200,7 @@ The `http://<host>:8090/status/live` APIcast endpoint can be used to check the s
 
 2. Check that the APIcast gateway can download the services configuration:
 
-     > :warning: **NOTE**: Replace the `<3scale_tenant_admin_host>` and `<3scale_tenant_access_token>` with the appropriate value according to your environment.
+     >  **NOTE**: Replace the `<3scale_tenant_admin_host>` and `<3scale_tenant_access_token>` with the appropriate value according to your environment.
 
 
     ```shell script
