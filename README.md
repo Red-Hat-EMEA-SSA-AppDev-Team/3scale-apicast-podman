@@ -13,8 +13,10 @@ Red Hat 3scale APIcast Gateway **version 2.13.4** is used in these instructions.
 
 - Two virtual machines running [RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/) v8.x or v9.x. One will be used for the _staging_ APIcast gateway and the second one will be used for the _production_ APIcast gateway.
 - [Podman](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/building_running_and_managing_containers/index) v4.x
-- Valid credentials to connect to the public Red Hat image registry ([registry.redhat.io](registry.redhat.io))
-    - See https://access.redhat.com/terms-based-registry/ on how to create the service account associated with your Red Hat customer account.
+    > **NOTE:** [Podman](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/building_running_and_managing_containers/index) must have the credentials to connect to the public Red Hat container registry ([registry.redhat.io](registry.redhat.io)) in order to pull the APIcast image.
+    - The `podman login` command can generate a file with credentials (${XDG_RUNTIME_DIR}/containers/auth.json). Example: `podman login registry.redhat.io` and then enter the service account credentials to connect.
+    - See https://docs.podman.io/en/latest/markdown/podman-login.1.html
+    - See https://access.redhat.com/terms-based-registry/ to create the service account associated with your Red Hat customer account.
 
 ## Instructions 
 
