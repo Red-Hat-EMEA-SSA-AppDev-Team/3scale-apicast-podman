@@ -5,13 +5,14 @@
 This repository contains instructions for running [Red Hat 3scale APIcast Gateways](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#doc-wrapper) outside of a [Red Hat OpenShift](https://access.redhat.com/products/openshift/) cluster. 
 
 - The target hosts can be any [RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/)-based host such as a virtual machine or an AWS EC2 instance.
-- The [Red Hat 3scale APIcast Gateways](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#doc-wrapper) can be fronted by a load-balancer/reverse-proxy for external/internal access by API consumers applications.
+- The [Red Hat 3scale APIcast Gateways](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#doc-wrapper) can be fronted by a load-balancer/reverse-proxy for external/internal access by API consumers applications. An example of such  architecture would look like this:
+![RedHat3scaleAPIcastGateways_on_VMs.png](./images/RedHat3scaleAPIcastGateways_on_VMs.png)
 
 Red Hat 3scale APIcast Gateway **version 2.13.4** is used in these instructions.
 
 ## Prerequisites
 
-- Two virtual machines running [RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/) v8.x or v9.x. One will be used for the _staging_ APIcast gateway and the second one will be used for the _production_ APIcast gateway.
+- Two virtual machines running [RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/) v8.x or v9.x. One will be used for the [_staging_](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#apicast-environment) APIcast gateway and the second one will be used for the [_production_](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#apicast-environment) APIcast gateway.
 - [Podman](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/building_running_and_managing_containers/index) v4.x
     > **NOTE:** [Podman](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/building_running_and_managing_containers/index) must have the credentials to connect to the public Red Hat container registry ([registry.redhat.io](registry.redhat.io)) in order to pull the APIcast image.
     - The `podman login` command can generate a file with credentials (${XDG_RUNTIME_DIR}/containers/auth.json). Example: `podman login registry.redhat.io` and then enter the service account credentials to connect.
@@ -22,7 +23,7 @@ Red Hat 3scale APIcast Gateway **version 2.13.4** is used in these instructions.
 
 ### 1. Staging APIcast Gateway
 
-Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/introduction-to-systemd_configuring-basic-system-settings) service to manage the staging APIcast lifecycle:
+Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/introduction-to-systemd_configuring-basic-system-settings) service to manage the [_staging_](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#apicast-environment) APIcast lifecycle:
 
 1. As a root user, create the `apicast-staging.service` file in the `/etc/systemd/system` directory with the following contents:
 
@@ -105,7 +106,7 @@ Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enter
 
 ### 2. Production APIcast Gateway
 
-Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/introduction-to-systemd_configuring-basic-system-settings) service to manage the staging APIcast lifecycle:
+Create the [systemd](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/introduction-to-systemd_configuring-basic-system-settings) service to manage the [_production_](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#apicast-environment) APIcast lifecycle:
 
 1. As a root user, create the `apicast-production.service` file in the `/etc/systemd/system` directory with the following contents:
 
