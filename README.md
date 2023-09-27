@@ -73,9 +73,18 @@ As a root user:
 
     3. Next:
 
-        - To start the `apicast-staging.service`, run `systemctl start apicast-staging.service`
-        - To stop the `apicast-staging.service`, run `systemctl stop apicast-staging.service`
-        - To display staging APIcast logs, run `podman logs -f --names apicast-staging`
+        - To start the `apicast-staging.service`, run the following command line:
+            ```shell script
+            systemctl start apicast-staging.service
+            ```
+        - To stop the `apicast-staging.service`, run the following command line:
+            ```shell script
+            systemctl stop apicast-staging.service
+            ```
+        - To display staging APIcast logs, run the following command line:
+            ```shell script
+            podman logs -f --names apicast-staging
+            ```
 
 #### OPTIONAL: Create a TLS-enabled staging APIcast gateway service
 
@@ -161,9 +170,18 @@ As a root user:
 
     3. Next:
 
-        - To start the `apicast-production.service`, run `systemctl start apicast-production.service`
-        - To stop the `apicast-production.service`, run `systemctl stop apicast-production.service`
-        - To display staging APIcast logs, run `podman logs -f --names apicast-production`
+        - To start the `apicast-production.service`, run the following command line:
+            ```shell script
+            systemctl start apicast-production.service
+            ```
+        - To stop the `apicast-production.service`, run the following command line:
+            ```shell script
+            systemctl stop apicast-production.service
+            ```
+        - To display staging APIcast logs, run the following command line:
+            ```shell script
+            podman logs -f --names apicast-production
+            ```
 
 #### OPTIONAL: Create a TLS-enabled production APIcast gateway service
 
