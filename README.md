@@ -8,7 +8,7 @@ This repository contains instructions for running [Red Hat 3scale APIcast Gatewa
 - The [Red Hat 3scale APIcast Gateways](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.13/html/installing_3scale/installing-apicast#doc-wrapper) can be fronted by a load-balancer/reverse-proxy for external/internal access by API consumers applications. An example of such  architecture would look like this:
 ![RedHat3scaleAPIcastGateways_on_VMs.svg](./images/RedHat3scaleAPIcastGateways_on_VMs.svg)
 
-Red Hat 3scale APIcast Gateway **version 2.13.4** is used in these instructions.
+Red Hat 3scale APIcast Gateway **version 2.13** is used in these instructions.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ As a root user:
     -e APICAST_CONFIGURATION_LOADER=lazy \
     -e THREESCALE_DEPLOYMENT_ENV=staging \
     -e THREESCALE_PORTAL_ENDPOINT=https://<3scale_accountmgtapi_access_token>@<3scale_tenant_admin_endpoint> \
-    registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13.4
+    registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13
     ```
 
 2. `Ctrl + C` to exit after having made sure, the container ran successfully.
@@ -114,7 +114,7 @@ As a root user:
     -e APICAST_CONFIGURATION_LOADER=lazy \
     -e THREESCALE_DEPLOYMENT_ENV=staging \
     -e THREESCALE_PORTAL_ENDPOINT=https://<3scale_accountmgtapi_access_token>@<3scale_tenant_admin_endpoint> \
-    registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13.4
+    registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13
     ```
 
 3. The rest of the instrucitons are the same as in the previous section.
@@ -139,7 +139,7 @@ As a root user:
     -e APICAST_CONFIGURATION_LOADER=boot \
     -e THREESCALE_DEPLOYMENT_ENV=production \
     -e THREESCALE_PORTAL_ENDPOINT=https://<3scale_accountmgtapi_access_token>@<3scale_tenant_admin_endpoint> \
-    registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13.4
+    registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13
     ```
 
 2. `Ctrl + C` to exit after having made sure the container ran successfully.
@@ -211,7 +211,7 @@ As a root user:
     -e APICAST_CONFIGURATION_LOADER=boot \
     -e THREESCALE_DEPLOYMENT_ENV=production \
     -e THREESCALE_PORTAL_ENDPOINT=https://<3scale_accountmgtapi_access_token>@<3scale_tenant_admin_endpoint> \
-    registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13.4
+    registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13
     ```
     
 3. The rest of the instrucitons are the same as in the previous section.
